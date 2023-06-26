@@ -4,7 +4,6 @@ import com.example.demo.dao.PhoneNumber;
 
 import javax.persistence.Entity;
 
-@Entity
 public class UserDetails {
 
 
