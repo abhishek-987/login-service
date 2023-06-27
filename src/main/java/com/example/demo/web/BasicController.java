@@ -1,6 +1,7 @@
 package com.example.demo.web;
 
 import com.example.demo.dao.Credentials;
+import com.example.demo.dao.NewuserDetails;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -36,9 +37,9 @@ public class BasicController {
 
 
     @RequestMapping(value = "/insertUser", method = RequestMethod.POST)
-    public String insertUser(@RequestBody Credentials credentials) {
+    public String insertUser(@RequestBody NewuserDetails newuserDetails) {
 
-        return userService.insertUser(credentials);
+        return userService.insertUser(newuserDetails);
 
 
     }
