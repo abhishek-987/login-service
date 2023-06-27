@@ -24,6 +24,8 @@ public class BasicController {
 
     }
 
+
+    //below api is just for the testing purposes
     @GetMapping(value = "/checkUser")
     public String checkUserDemo() {
 
