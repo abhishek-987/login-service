@@ -1,11 +1,11 @@
-package com.example.demo.service;
+package com.example.chillax.service;
 
-import com.example.demo.dao.Credentials;
-import com.example.demo.dao.NewuserDetails;
-import com.example.demo.entity.UserDetails;
-import com.example.demo.entity.Users;
-import com.example.demo.repository.UserRepository;
-import com.example.demo.repository.UserdetialsRepository;
+import com.example.chillax.dao.Credentials;
+import com.example.chillax.dao.NewUserDetails;
+import com.example.chillax.entity.UserDetails;
+import com.example.chillax.entity.Users;
+import com.example.chillax.repository.UserRepository;
+import com.example.chillax.repository.UserdetialsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,13 +39,13 @@ public class UserService {
 
     }
 
-    public String insertUser(NewuserDetails newuserDetails) {
+    public String insertUser(NewUserDetails newuserDetails) {
         Optional<UserDetails> user = userdetialsRepository.findById(newuserDetails.getCredentials().getUsername());
         if(user.isPresent()) {
             return "Username is already Present";
         }else {
             userRepository.save(new Users(newuserDetails.getCredentials().getUsername(), newuserDetails.getCredentials().getPassword()));
-            userdetialsRepository.save(new UserDetails(newuserDetails.getCredentials().getUsername(), newuserDetails.getEmail(), newuserDetails.getPhoneNumber()));
+            userdetialsRepository.save(new UserDetails(newuserDetails.getCredentials().getUsername(), newuserDetails.getFullName(), newuserDetails.getEmail(), newuserDetails.getPhoneNumber()));
             return "User Stored";
         }
     }

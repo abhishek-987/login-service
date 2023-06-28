@@ -1,19 +1,23 @@
-package com.example.demo.entity;
+package com.example.chillax.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 
 @Entity
-public class UserDetails {
+public class UserDetails extends Username {
 
-    @Id
-    String username;
+    @Column(nullable=false)
+    String fullName;
 
+    @Column(unique=true)
     String email;
 
+    @Column(unique=true)
     PhoneNumber phoneNumber;
 
-    public UserDetails(String username, String email, PhoneNumber phoneNumber) {
+    public UserDetails(String username, String fullName, String email, PhoneNumber phoneNumber) {
         this.username = username;
         this.email = email;
         this.phoneNumber = phoneNumber;
@@ -25,6 +29,10 @@ public class UserDetails {
 
     public String getUsername() {
         return username;
+    }
+
+    public String fullName() {
+        return fullName;
     }
 
     public String getEmail() {

@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.chillax;
 
 
 import org.springframework.boot.SpringApplication;

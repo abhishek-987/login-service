@@ -1,15 +1,13 @@
-package com.example.demo.entity;
+package com.example.chillax.entity;
 
 import javax.persistence.*;
 
 import java.util.Objects;
 
 @Entity
-public class Users {
+public class Users extends Username {
 
-    @Id
-    String username;
-
+    @Column(nullable=false)
     String password;
 
     public Users(String username, String password) {

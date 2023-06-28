@@ -1,4 +1,4 @@
-package com.example.demo.dao;
+package com.example.chillax.dao;
 
 public class Credentials {
     private String username;

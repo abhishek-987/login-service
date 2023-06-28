@@ -1,8 +1,8 @@
-package com.example.demo.web;
+package com.example.chillax.web;
 
-import com.example.demo.dao.Credentials;
-import com.example.demo.dao.NewuserDetails;
-import com.example.demo.service.UserService;
+import com.example.chillax.dao.Credentials;
+import com.example.chillax.dao.NewUserDetails;
+import com.example.chillax.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,7 +37,7 @@ public class BasicController {
 
 
     @RequestMapping(value = "/insertUser", method = RequestMethod.POST)
-    public String insertUser(@RequestBody NewuserDetails newuserDetails) {
+    public String insertUser(@RequestBody NewUserDetails newuserDetails) {
 
         return userService.insertUser(newuserDetails);
 

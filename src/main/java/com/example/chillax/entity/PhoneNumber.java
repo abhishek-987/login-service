@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.example.chillax.entity;
 
 import javax.persistence.Embeddable;
 
