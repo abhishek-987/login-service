@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-public class Users extends Username {
+public class Users extends UsernameEntity {
 
     @Column(nullable=false)
     String password;

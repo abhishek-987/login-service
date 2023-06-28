@@ -2,11 +2,9 @@ package com.example.chillax.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 
 @Entity
-public class UserDetails extends Username {
+public class UserDetails extends UsernameEntity {
 
     @Column(nullable=false)
     String fullName;
